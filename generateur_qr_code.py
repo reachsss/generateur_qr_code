@@ -9,7 +9,10 @@ def generer_qr_code(lien, nom_fichier):
     )
     qr.add_data(lien)
     qr.make(fit=True)
-    img = qr.make_image()
+    img = qr.make_image(
+        fill_color="black",
+        back_color="white"
+    )
     img.save(nom_fichier)
 
 #Executez la fonction generer_qr_code avec le lien et le nom du fichier pour obtenir votre QR Code ! 
